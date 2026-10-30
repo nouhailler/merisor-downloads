@@ -244,4 +244,4 @@ case ":${PATH}:" in
     *":${binary_directory}:"*) ;;
     *) warn "ajoutez ${binary_directory} à PATH pour lancer MERISOR avec la commande 'merisor'." ;;
 esac
-say "pour désinstaller : curl -fsSL https://raw.githubusercontent.com/${REPOSITORY}/main/landing-page/install.sh | bash -s -- --uninstall"
+say "pour désinstaller : curl -fsSL https://raw.githubusercontent.com/${REPOSITORY}/main/install.sh | bash -s -- --uninstall"

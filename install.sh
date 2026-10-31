@@ -35,7 +35,7 @@ Usage :
   install.sh --uninstall [options]
 
 Options :
-  --release VERSION   Installer une release précise (exemple : 0.12.0).
+  --release VERSION   Installer une release précise (exemple : 0.14.0).
   --prefix CHEMIN     Racine d'installation (défaut : ~/.local).
   --no-desktop        Ne pas créer de lanceur dans le menu des applications.
   --uninstall         Désinstaller MERISOR du profil utilisateur.

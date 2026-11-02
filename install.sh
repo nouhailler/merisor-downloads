@@ -35,7 +35,7 @@ Usage :
   install.sh --uninstall [options]
 
 Options :
-  --release VERSION   Installer une release précise (exemple : 0.15.0).
+  --release VERSION   Installer une release précise (exemple : 0.15.1).
   --prefix CHEMIN     Racine d'installation (défaut : ~/.local).
   --no-desktop        Ne pas créer de lanceur dans le menu des applications.
   --uninstall         Désinstaller MERISOR du profil utilisateur.
@@ -231,8 +231,11 @@ Icon=io.github.nouhailler.merisor
 Terminal=false
 Categories=Development;Education;Database;
 StartupNotify=true
+StartupWMClass=MERISOR
 EOF
     chmod 0644 "$desktop_path"
+    # Un changement de date suffit à faire relire le thème d'icônes aux bureaux.
+    touch "${data_home}/icons/hicolor" 2>/dev/null || true
     if command -v update-desktop-database >/dev/null 2>&1; then
         update-desktop-database "$desktop_directory" >/dev/null 2>&1 || true
     fi
